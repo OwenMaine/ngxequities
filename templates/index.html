@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Market Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        thead th {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+        }
+        tbody td {
+            text-align: center;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="mt-5" style="position: relative; text-align: center;">Stock Market Dashboard</h1>
+        <div class="table-container mt-3">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Previous Closing Price</th>
+                        <th>Opening Price</th>
+                        <th>High</th>
+                        <th>Low</th>
+                        <th>Close</th>
+                        <th>Change</th>
+                        <th>Trades</th>
+                        <th>Volume</th>
+                        <th>Value</th>
+                        <th>Trade Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td>{{ row['Company'] }}</td>
+                        <td>{{ row['Previous Closing Price'] }}</td>
+                        <td>{{ row['Opening Price'] }}</td>
+                        <td>{{ row['High'] }}</td>
+                        <td>{{ row['Low'] }}</td>
+                        <td>{{ row['Close'] }}</td>
+                        <td>{{ row['Change'] }}</td>
+                        <td>{{ row['Trades'] }}</td>
+                        <td>{{ row['Volume'] }}</td>
+                        <td>{{ row['Value'] }}</td>
+                        <td>{{ row['Trade Date'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
