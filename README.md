@@ -6,7 +6,7 @@ This project provides a web-based dashboard and API for getting and displaying s
 
 ## Features
 
-- **Web-based Dashboard**: A user-friendly interface to view the scraped stock market data.
+- **Web-based Dashboard**: A user-friendly interface to view the stock market data.
 - **API Endpoints**: Provides data in JSON format and a downloadable CSV file.
 - **JWT Authentication**: Secures the API endpoints using JSON Web Tokens (JWT).
 
